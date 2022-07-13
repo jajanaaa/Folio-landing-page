@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+/* ------------ GENERAL STYLES ---------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #232340;
+  --grey: #606060;
+  --light-grey: #8b8b8b;
+  --white: #ffffff;
+  --light-yellow: #fbf8f3;
+  --yellow: #fde3a7;
+  --blue: #5468e7;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--black);
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+p {
+  line-height: 1.3;
+  color: var(--grey);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+/* Common breakpoints are 
+320px — 480px for mobile devices, 
+481px — 768px for iPads & tablets, 
+769px — 1024px for small screens like laptop, 
+1025px — 1200px for large screens like Desktops,  */
+
+/* 1440
+1024 */
+
+/* mobile 375px*/
+/* tablet min 768px max 1023px */
+/* laptop min 1024px */
+/* ------------ NAV BAR ---------------------------------- */
+img {
+  width: 50px;
+}
+
+img.logo {
+  width: 8em;
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 44px 20px 20px;
+  background-color: red;
+}
+
+.active {
+  height: 100vh;
+}
+
+.hamburger-menu {
+  height: 28px;
+  width: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: var(--light-grey);
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-links {
+  display: none;
+}
+
+.hamburger-menu .line-1 {
+  transform-origin: 0% 0%;
+}
+
+.hamburger-menu .line-3 {
+  transform-origin: 0% 100%;
+}
+
+.active .line-1 {
+  transform: rotate(45deg);
+}
+
+.active .line-2 {
+  transform: scaleY(0);
+}
+
+.active .line-3 {
+  transform: rotate(-45deg);
+}
+
+.active .nav-links {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    column-gap: 64px;
+  }
+}
+/* ------------ HERO SECTION ---------------------------------- */
+
+/* ------------ SECTION 1 BENEFITS ---------------------------------- */
+
+/* ------------ SECTION 2 PROJECTS  ---------------------------------- */
+
+/* ------------ SECTION 3 TESTIMONIALS ---------------------------------- */
+
+/* ------------ SECTION 4 CALL FOR ACTION ---------------------------------- */
+
+/* ------------ FOOTER ---------------------------------- */
