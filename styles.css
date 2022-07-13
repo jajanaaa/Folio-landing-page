@@ -138,7 +138,7 @@ img.logo {
 }
 
 .active .line-2 {
-  transform: scaleY(0);
+  transform: translate(10px, 5px) scaleY(0);
 }
 
 .active .line-3 {
