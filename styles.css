@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
 /* ------------ GENERAL STYLES ---------------------------------- */
 * {
@@ -54,6 +54,7 @@ a {
 ul {
   list-style: none;
 }
+
 /* Common breakpoints are 
 320px — 480px for mobile devices, 
 481px — 768px for iPads & tablets, 
@@ -72,7 +73,8 @@ img {
 }
 
 img.logo {
-  width: 8em;
+  width: 120px;
+  margin-top: 5px;
 }
 
 .nav-container {
@@ -80,12 +82,21 @@ img.logo {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 44px 20px 20px;
-  background-color: red;
+  padding: 20px 44px 20px 32px;
+  background-color: var(--light-yellow);
 }
 
 .active {
+  position: fixed;
+  align-items: flex-start;
   height: 100vh;
+  width: 100vw;
+  font-weight: bold;
+  font-size: 1.3em;
+  background-color: var(--black);
+}
+.active a {
+  color: var(--white);
 }
 
 .hamburger-menu {
@@ -104,8 +115,14 @@ img.logo {
   transition: transform 0.4s ease-in-out;
 }
 
+.active .line {
+  background-color: var(--white);
+}
+
 .nav-links {
   display: none;
+  row-gap: 40px;
+  column-gap: 64px;
 }
 
 .hamburger-menu .line-1 {
@@ -117,7 +134,7 @@ img.logo {
 }
 
 .active .line-1 {
-  transform: rotate(45deg);
+  transform: translate(10px, 5px) rotate(45deg);
 }
 
 .active .line-2 {
@@ -125,21 +142,50 @@ img.logo {
 }
 
 .active .line-3 {
-  transform: rotate(-45deg);
+  transform: translate(10px, 5px) rotate(-45deg);
 }
 
 .active .nav-links {
   display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .hamburger-menu {
     display: none;
   }
 
   .nav-links {
     display: flex;
-    column-gap: 64px;
+  }
+
+  img.logo {
+    margin-top: unset;
+  }
+
+  .nav-container {
+    padding: 30px 50px 30px 50px;
+  }
+
+  .nav-links a {
+    font-weight: 600;
+    color: var(--light-grey);
+  }
+
+  .btn {
+    font-weight: bold;
+    padding: 20px 70px;
+    background-color: red;
+    border-radius: 8px;
+  }
+
+  .contact-dark {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .nav-links a.contact-dark {
+    color: var(--white);
   }
 }
 /* ------------ HERO SECTION ---------------------------------- */
