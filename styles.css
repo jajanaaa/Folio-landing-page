@@ -10,7 +10,6 @@
 :root {
   --black: #232340;
   --grey: #606060;
-  /* --light-grey: #8b8b8b; */
   --white: #ffffff;
   --light-yellow: #fbf8f3;
   --yellow: #fde3a7;
@@ -19,6 +18,7 @@
 
 html {
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -69,6 +69,7 @@ ul {
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
+  display: block;
 }
 
 /* ------------ NAV BAR ---------------------------------- */
@@ -117,9 +118,9 @@ ul {
 /* ------------   MENU ACTIVE ---------------------------------- */
 .active {
   position: fixed;
-  align-items: flex-start;
   height: 100vh;
   width: 100vw;
+  align-items: flex-start;
   font-weight: bold;
   font-size: 1.3em;
   background-color: var(--black);
@@ -128,6 +129,7 @@ ul {
 .active a {
   color: var(--white);
   padding: initial;
+  display: inline;
 }
 
 .active .line {
@@ -152,17 +154,12 @@ ul {
   width: 100%;
 }
 
-/* @media screen and (max-width: 900px) and (orientation: landscape) {
-  .nav-links {
-    row-gap: 50px;
-  }
-} */
-
 /* ------------   NAV FOR DESKTOP ---------------------------------- */
 
 @media (min-width: 900px) {
   .nav-container {
     padding: 30px 50px;
+    height: 120px;
   }
 
   .hamburger-menu {
@@ -171,6 +168,7 @@ ul {
 
   .nav-links {
     display: flex;
+    align-items: center;
   }
 
   .nav-links a {
@@ -178,16 +176,11 @@ ul {
     color: var(--grey);
   }
 
-  .btn-contact-dark {
-    padding: 17px 34px;
-    border-radius: 8px;
-    background-color: var(--black);
-    color: var(--white);
-    font-weight: bold;
-  }
-
   a.btn-contact-dark {
     color: var(--white);
+    background-color: var(--black);
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    transition: transform 0.1s ease-in-out;
   }
 }
 /* ------------ HERO SECTION ---------------------------------- */
@@ -210,6 +203,8 @@ ul {
   display: block;
   background-color: var(--blue);
   color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  transition: transform 0.1s ease-in-out;
 }
 
 .partner-logo {
@@ -226,7 +221,7 @@ ul {
 /* ------------ HERO FOR TABLET ---------------------------------- */
 @media (min-width: 768px) {
   #hero-section {
-    padding: 20px 40px 0 40px;
+    padding: 20px 60px 0 60px;
   }
 
   .hero-container {
@@ -250,7 +245,6 @@ ul {
 
   .btn-work {
     display: inline-block;
-    width: initial;
   }
 
   #hero-section p {
@@ -273,6 +267,7 @@ ul {
     font-size: 3em;
   }
 }
+
 /* ------------ SECTION 1 BENEFITS ---------------------------------- */
 #section-1 {
   padding: 40px 32px;
@@ -289,6 +284,7 @@ ul {
   margin: 10px 0;
 }
 
+/* ------------ SECTION 1 BENEFITS FOR TABLET ---------------------------------- */
 @media (min-width: 768px) {
   #section-1 {
     padding: 40px 60px;
@@ -299,6 +295,7 @@ ul {
   }
 }
 
+/* ------------ SECTION 1 BENEFITS FOR DESKTOP ---------------------------------- */
 @media (min-width: 1024px) {
   #section-1 {
     padding: 40px 100px;
@@ -306,10 +303,6 @@ ul {
 }
 
 /* ------------ SECTION 2 PROJECTS  ---------------------------------- */
-.project-img {
-  max-width: 100%;
-}
-
 #section-2 {
   padding: 40px 32px;
 }
@@ -320,18 +313,21 @@ ul {
   row-gap: 30px;
 }
 
-.project-5 {
-  display: none;
-  /* grid-row-start: 2;
-    grid-column-start: 3; */
+.project-img {
+  max-width: 100%;
 }
 
+.projects-container p {
+  font-size: 0.8em;
+  margin: 5px 0;
+}
+
+.project-5,
 .project-6 {
   display: none;
-  /* grid-row-start: 4;
-    grid-column-start: 3; */
 }
 
+/* ------------ SECTION 2 PROJECTS FOR TABLET ---------------------------------- */
 @media (min-width: 768px) {
   #section-2 {
     padding: 40px 60px;
@@ -343,8 +339,8 @@ ul {
 
   .projects-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 1fr 50px 1fr;
-    gap: 0 50px;
+    grid-template-rows: 40px 1fr 40px 1fr;
+    gap: 0 40px;
   }
 
   .project-1 {
@@ -366,15 +362,7 @@ ul {
   }
 }
 
-p.project-title {
-  font-size: 0.8em;
-  margin: 5px 0;
-}
-
-/* h4 {
-  font-size: 1.1em;
-} */
-
+/* ------------ SECTION 2 PROJECTS FOR DESKTOP ---------------------------------- */
 @media (min-width: 1024px) {
   #section-2 {
     padding: 40px 100px;
@@ -426,18 +414,19 @@ p.project-title {
 #section-3 {
   padding: 40px 32px;
 }
-.client-card {
-  background-color: var(--light-yellow);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-}
 
 .testimonials-container {
   display: flex;
   flex-direction: column;
   gap: 10vw 2vw;
   margin-top: 30px;
+}
+
+.client-card {
+  background-color: var(--light-yellow);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
 }
 
 .client-img {
@@ -448,37 +437,34 @@ p.project-title {
   margin: 10px 0;
 }
 
-p.testimonial {
+.testimonials-container p {
   font-size: 0.9em;
   font-weight: lighter;
-  /* margin: 20px 0; */
 }
 
+/* ------------ SECTION 3 TESTIMONIALS FOR TABLET ---------------------------------- */
 @media (min-width: 768px) {
   #section-3 {
     padding: 40px 60px;
   }
+
   .testimonials-container {
     flex-direction: row;
   }
 }
 
+/* ------------ SECTION 3 TESTIMONIALS FOR DESKTOP ---------------------------------- */
 @media (min-width: 1024px) {
   #section-3 {
     padding: 40px 100px;
   }
 
-  p.testimonial {
-    font-size: 0.9em;
-    font-weight: lighter;
+  .testimonials-container p {
     margin: 10px 0;
   }
 }
-/* ------------ SECTION 4 CALL FOR ACTION ---------------------------------- */
-.rocket-img {
-  max-width: 15em;
-}
 
+/* ------------ SECTION 4 CALL FOR ACTION ---------------------------------- */
 #call-section {
   background-color: var(--blue);
   padding: 50px 32px;
@@ -490,6 +476,10 @@ p.testimonial {
   gap: 15vw;
   align-items: center;
   justify-content: space-between;
+}
+
+.rocket-img {
+  max-width: 15em;
 }
 
 .call-container h2 {
@@ -505,15 +495,19 @@ p.testimonial {
   background-color: var(--white);
   color: var(--black);
   display: block;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  transition: transform 0.1s ease-in-out;
 }
 
+/* ------------ SECTION 4 CALL FOR TABLET ---------------------------------- */
 @media (min-width: 768px) {
-  h2 {
-    font-size: 2em;
-  }
   #call-section {
     margin: 40px 60px;
     border-radius: 20px;
+  }
+
+  .call-container h2 {
+    font-size: 2em;
   }
 
   .rocket-img {
@@ -521,9 +515,7 @@ p.testimonial {
   }
 
   .call-container {
-    display: flex;
     flex-direction: row;
-    gap: 15vw;
   }
 
   .btn-contact-light {
@@ -532,31 +524,27 @@ p.testimonial {
 
   .call-container p {
     max-width: 90%;
+    margin: 30px 0;
   }
 }
 
+/* ------------ SECTION 4 CALL FOR DESKTOP ---------------------------------- */
 @media (min-width: 1024px) {
   #call-section {
     margin: 40px 100px;
-  }
-
-  #call-section {
     padding: 50px 5vw;
   }
+
   .rocket-img {
     max-width: 15em;
-  }
-
-  .call-container p {
-    max-width: 90%;
   }
 
   .call-container h2 {
     font-size: 2.5em;
   }
 }
-/* ------------ FOOTER ---------------------------------- */
 
+/* ------------ FOOTER ---------------------------------- */
 #footer {
   background-color: var(--light-yellow);
   padding: 50px 32px;
@@ -565,6 +553,7 @@ p.testimonial {
 .footer-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 6vw;
 }
@@ -578,23 +567,23 @@ h3.footer-heading {
 }
 
 .footer-container p {
-  /* max-width: 60%; */
   margin-bottom: 10px;
 }
 
 .footer-container li {
   color: var(--grey);
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
+/* ------------ FOOTER FOR TABLET ---------------------------------- */
 @media (min-width: 768px) {
   #footer {
-    padding: 50px 40px;
+    padding: 50px 60px;
   }
 
   .footer-container {
     flex-direction: row;
-    justify-content: space-between;
   }
 
   .footer-container div.footer-header {
@@ -606,8 +595,43 @@ h3.footer-heading {
   }
 }
 
+/* ------------ FOOTER FOR DESKTOP ---------------------------------- */
 @media (min-width: 1024px) {
   #footer {
     padding: 50px 100px;
+  }
+}
+
+/* ------------ HOVER STATES ---------------------------------- */
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.footer-container li:hover {
+  color: var(--black);
+  transform: translate(7px, 0) scale(1.1);
+}
+
+.nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.nav-links a:not(.btn):hover {
+  color: var(--black);
+}
+
+@media (min-width: 1024px) {
+  .frame {
+    max-width: 24vw;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .frame img {
+    transition: transform 0.5s ease;
+  }
+
+  .frame:hover img {
+    transform: scale(1.5);
   }
 }

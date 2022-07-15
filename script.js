@@ -1,3 +1,5 @@
+// HAMBURGER MENU
+
 const hamburger = document.querySelector(".hamburger-menu");
 const navbar = document.querySelector(".nav-container");
 const logo = document.querySelector(".logo");
