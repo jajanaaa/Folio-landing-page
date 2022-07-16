@@ -70,6 +70,9 @@ ul {
   font-weight: bold;
   text-align: center;
   display: block;
+  cursor: pointer;
+  border: none;
+  font-family: "Inter", sans-serif;
 }
 
 /* ------------ NAV BAR ---------------------------------- */
@@ -115,6 +118,15 @@ ul {
   display: none;
   gap: 10vh 4vw;
 }
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--white);
+  z-index: 999;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 30%);
+}
 /* ------------   MENU ACTIVE ---------------------------------- */
 .active {
   position: fixed;
@@ -158,8 +170,7 @@ ul {
 
 @media (min-width: 900px) {
   .nav-container {
-    padding: 30px 50px;
-    height: 120px;
+    padding: 25px 50px;
   }
 
   .hamburger-menu {
@@ -199,8 +210,9 @@ ul {
   margin: 10px 0 20px 0;
 }
 
-.btn-work {
+.btn-secondary {
   display: block;
+  width: 100%;
   background-color: var(--blue);
   color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -243,7 +255,7 @@ ul {
     display: flex;
   }
 
-  .btn-work {
+  .btn-secondary {
     display: inline-block;
   }
 
@@ -633,5 +645,64 @@ h3.footer-heading {
 
   .frame:hover img {
     transform: scale(1.5);
+  }
+}
+
+/* ------------ CONTACT US PAGE ---------------------------------- */
+input,
+textarea {
+  background-color: var(--light-yellow);
+  width: 100%;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  margin: 5px 0 15px 0;
+}
+
+.contact-elements {
+  padding: 40px 32px;
+}
+
+.contact-elements h1 {
+  font-size: 1.5em;
+  margin: 5px 0;
+}
+
+label {
+  color: var(--black);
+}
+
+.contact-elements header {
+  margin-bottom: 40px;
+}
+
+.connect-illu {
+  max-width: 90%;
+}
+
+.connect-illu-container {
+  background: linear-gradient(#ffffff 50%, var(--yellow) 50%);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    display: flex;
+  }
+
+  .connect-illu-container {
+    background: linear-gradient(to right, #ffffff 50%, var(--yellow) 50%);
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-elements {
+    padding: 40px 60px;
+  }
+
+  .connect-illu {
+    max-width: 80%;
   }
 }
