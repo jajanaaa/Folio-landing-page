@@ -69,7 +69,6 @@ ul {
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
-  font-family: "Inter", sans-serif;
 }
 
 /* ------------ NAV BAR ---------------------------------- */
@@ -118,8 +117,8 @@ ul {
 
 .sticky {
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   background-color: var(--white);
   z-index: 999;
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 30%);
@@ -141,7 +140,6 @@ ul {
 .active a {
   color: var(--white);
   padding: initial;
-  display: inline;
 }
 
 .active .line {
@@ -638,7 +636,7 @@ h3.footer-heading {
     color: var(--black);
   }
 }
-
+/* ------------ ZOOM ON HOVER FOR PROJECTS ---------------------------------- */
 @media (min-width: 1024px) {
   .frame {
     max-width: 24vw;
@@ -656,6 +654,12 @@ h3.footer-heading {
 }
 
 /* ------------ CONTACT US PAGE ---------------------------------- */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 input,
 textarea {
   background-color: var(--light-yellow);
@@ -667,25 +671,27 @@ textarea {
   margin: 10px 0 15px 0;
 }
 
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .btn-send {
-  margin-top: 20px;
   width: 100%;
   background-color: var(--blue);
   color: var(--white);
+  margin-top: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   transition: transform 0.1s ease-in-out;
   cursor: pointer;
   border: none;
 }
 
+label {
+  color: var(--black);
+}
+
 .contact-elements {
   padding: 40px 32px 5px 32px;
+}
+
+.contact-elements header {
+  margin-bottom: 40px;
 }
 
 .contact-elements h1 {
@@ -693,21 +699,13 @@ textarea {
   margin: 5px 0;
 }
 
-label {
-  color: var(--black);
-}
-
-.contact-elements header {
-  margin-bottom: 40px;
+.connect-illu-container {
+  background: linear-gradient(#ffffff 50%, var(--yellow) 50%);
+  text-align: center;
 }
 
 .connect-illu {
   max-width: 90%;
-}
-
-.connect-illu-container {
-  background: linear-gradient(#ffffff 50%, var(--yellow) 50%);
-  text-align: center;
 }
 
 .contact-after {
@@ -719,25 +717,26 @@ label {
   font-size: 2em;
 }
 
+/* ------------ CONTACT US PAGE FOR TABLET ---------------------------------- */
 @media (min-width: 768px) {
   .contact-container {
     display: flex;
-    height: 100%;
     flex-direction: row;
-  }
-
-  .connect-illu-container {
-    background: linear-gradient(to right, #ffffff 50%, var(--yellow) 50%);
-    display: flex;
-    align-items: center;
-    flex: 1;
+    height: 100%;
   }
 
   .contact-elements {
-    flex: 1;
     align-self: center;
     margin: 7vw 0 7vw 5vw;
     padding: 0;
+    flex: 1;
+  }
+
+  .connect-illu-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(to right, #ffffff 50%, var(--yellow) 50%);
   }
 
   .connect-illu {
@@ -755,6 +754,7 @@ label {
   }
 }
 
+/* ------------ CONTACT US PAGE FOR DESKTOP ---------------------------------- */
 @media (min-width: 1024px) {
   .contact-elements {
     margin: 1vw 0 1vw 5vw;

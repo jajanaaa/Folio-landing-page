@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon.png"
+    />
     <link rel="stylesheet" href="../styles.css" />
     <script src="contact-script.js" defer></script>
     <title>Contact Us</title>
@@ -19,27 +24,12 @@
           </header>
           <main>
             <form>
-              <!--  -->
               <label for="name">Name</label> <br />
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                required
-              />
+              <input type="text" id="name" name="name" placeholder="Name" />
               <br />
-              <!--  -->
               <label for="email">Email</label> <br />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                required
-              />
+              <input type="email" id="email" name="email" placeholder="Email" />
               <br />
-              <!--  -->
               <label for="message">Message</label> <br />
               <textarea
                 id="message"
@@ -47,7 +37,6 @@
                 rows="6"
                 cols="50"
                 placeholder="Type your message here..."
-                required
               ></textarea>
               <br />
               <button type="button" class="btn btn-send">Send Message</button>

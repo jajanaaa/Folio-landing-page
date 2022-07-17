@@ -27,19 +27,18 @@ const changeLogo = function () {
 
 // STICKY NAV
 const header = document.querySelector("header");
-const navContainer = document.querySelector(".nav-container");
-const navheight = navContainer.getBoundingClientRect().height;
+const navheight = navbar.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) navContainer.classList.add("sticky");
-  else navContainer.classList.remove("sticky");
+  if (!entry.isIntersecting) navbar.classList.add("sticky");
+  else navbar.classList.remove("sticky");
 };
 
-const navObserver = new IntersectionObserver(stickyNav, {
+const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   treshhold: 0,
   rootMargin: `-${navheight}px`,
 });
 
-navObserver.observe(header);
+headerObserver.observe(header);
