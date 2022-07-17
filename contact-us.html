@@ -12,33 +12,55 @@
   <body>
     <div class="contact-container">
       <div class="contact-elements">
-        <header>
-          <p class="title">Contact Us</p>
-          <h1>Lets get in touch!</h1>
-        </header>
-        <main>
-          <form>
-            <!--  -->
-            <label for="name">Name</label> <br />
-            <input type="text" id="name" name="name" placeholder="Name" />
+        <div class="contact-before">
+          <header>
+            <p class="title">Contact Us</p>
+            <h1>Lets get in touch!</h1>
+          </header>
+          <main>
+            <form>
+              <!--  -->
+              <label for="name">Name</label> <br />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <br />
+              <!--  -->
+              <label for="email">Email</label> <br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <br />
+              <!--  -->
+              <label for="message">Message</label> <br />
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                cols="50"
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+              <br />
+              <button type="button" class="btn btn-send">Send Message</button>
+            </form>
+          </main>
+        </div>
+        <div class="contact-after">
+          <h2>
+            Thank you,
             <br />
-            <!--  -->
-            <label for="email">Email</label> <br />
-            <input type="email" id="email" name="email" placeholder="Email" />
-            <br />
-            <!--  -->
-            <label for="message">Message</label> <br />
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              cols="50"
-              placeholder="Type your message here..."
-            ></textarea>
-            <br />
-            <button type="button" class="btn btn-send">Send Message</button>
-          </form>
-        </main>
+            we will be in touch
+          </h2>
+        </div>
       </div>
 
       <div class="connect-illu-container">

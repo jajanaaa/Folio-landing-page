@@ -69,9 +69,6 @@ ul {
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
-  display: block;
-  cursor: pointer;
-  border: none;
   font-family: "Inter", sans-serif;
 }
 
@@ -127,6 +124,7 @@ ul {
   z-index: 999;
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 30%);
 }
+
 /* ------------   MENU ACTIVE ---------------------------------- */
 .active {
   position: fixed;
@@ -210,9 +208,8 @@ ul {
   margin: 10px 0 20px 0;
 }
 
-.btn-secondary {
+.btn-work {
   display: block;
-  width: 100%;
   background-color: var(--blue);
   color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -255,7 +252,7 @@ ul {
     display: flex;
   }
 
-  .btn-secondary {
+  .btn-work {
     display: inline-block;
   }
 
@@ -283,6 +280,7 @@ ul {
 /* ------------ SECTION 1 BENEFITS ---------------------------------- */
 #section-1 {
   padding: 40px 32px;
+  scroll-margin-top: 200px;
 }
 
 .benefits-container {
@@ -317,6 +315,7 @@ ul {
 /* ------------ SECTION 2 PROJECTS  ---------------------------------- */
 #section-2 {
   padding: 40px 32px;
+  scroll-margin-top: 200px;
 }
 
 .projects-container {
@@ -425,6 +424,7 @@ ul {
 /* ------------ SECTION 3 TESTIMONIALS ---------------------------------- */
 #section-3 {
   padding: 40px 32px;
+  scroll-margin-top: 200px;
 }
 
 .testimonials-container {
@@ -654,7 +654,7 @@ h3.footer-heading {
 input,
 textarea {
   background-color: var(--light-yellow);
-  width: 70%;
+  width: 100%;
   padding: 15px;
   border: none;
   border-radius: 10px;
@@ -662,8 +662,19 @@ textarea {
   margin: 5px 0 15px 0;
 }
 
+.btn-send {
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--blue);
+  color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  transition: transform 0.1s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
 .contact-elements {
-  /* padding: 40px 32px; */
+  padding: 40px 32px;
 }
 
 .contact-elements h1 {
@@ -695,6 +706,7 @@ label {
 @media (min-width: 768px) {
   .contact-container {
     display: flex;
+    height: 100%;
   }
 
   .connect-illu-container {
@@ -713,14 +725,19 @@ label {
   .connect-illu {
     max-width: 70%;
   }
+
   input,
   textarea {
     width: 90%;
   }
+
+  .btn-send {
+    width: initial;
+  }
 }
 
 @media (min-width: 1024px) {
-  .contact-container {
-    height: 100vh;
+  .contact-elements {
+    margin: 1vw 0 1vw 5vw;
   }
 }
