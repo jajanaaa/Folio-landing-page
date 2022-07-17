@@ -661,6 +661,11 @@ textarea {
   font-family: "Inter", sans-serif;
   margin: 5px 0 15px 0;
 }
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .btn-send {
   margin-top: 20px;
