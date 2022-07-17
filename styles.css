@@ -80,7 +80,6 @@ ul {
   align-items: center;
   padding: 20px 44px 20px 32px;
   background-color: var(--light-yellow);
-  transition: all 0.8s ease-in-out;
 }
 
 .logo {
@@ -136,6 +135,7 @@ ul {
   font-weight: bold;
   font-size: 1.3em;
   background-color: var(--black);
+  transition: all 0.8s ease-in-out;
 }
 
 .active a {
