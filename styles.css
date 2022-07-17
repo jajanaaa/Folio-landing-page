@@ -624,12 +624,14 @@ h3.footer-heading {
   transform: translate(7px, 0) scale(1.1);
 }
 
-.nav-links li:hover {
-  transform: scale(1.1);
-}
+@media (min-width: 900px) {
+  .nav-links li:hover {
+    transform: scale(1.1);
+  }
 
-.nav-links a:not(.btn):hover {
-  color: var(--black);
+  .nav-links a:not(.btn):hover {
+    color: var(--black);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -652,8 +654,7 @@ h3.footer-heading {
 input,
 textarea {
   background-color: var(--light-yellow);
-  width: 100%;
-  width: 100%;
+  width: 70%;
   padding: 15px;
   border: none;
   border-radius: 10px;
@@ -662,7 +663,7 @@ textarea {
 }
 
 .contact-elements {
-  padding: 40px 32px;
+  /* padding: 40px 32px; */
 }
 
 .contact-elements h1 {
@@ -687,6 +688,10 @@ label {
   text-align: center;
 }
 
+.contact-after {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .contact-container {
     display: flex;
@@ -696,13 +701,26 @@ label {
     background: linear-gradient(to right, #ffffff 50%, var(--yellow) 50%);
     display: flex;
     align-items: center;
+    flex: 1;
   }
 
   .contact-elements {
-    padding: 40px 60px;
+    flex: 1;
+    align-self: center;
+    margin: 7vw 0 7vw 5vw;
   }
 
   .connect-illu {
-    max-width: 80%;
+    max-width: 70%;
+  }
+  input,
+  textarea {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-container {
+    height: 100vh;
   }
 }
