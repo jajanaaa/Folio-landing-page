@@ -26,8 +26,9 @@ const changeLogo = function () {
 };
 
 // STICKY NAV
-const nav = document.querySelector("nav");
+const header = document.querySelector("header");
 const navContainer = document.querySelector(".nav-container");
+const navheight = navContainer.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
@@ -38,7 +39,7 @@ const stickyNav = function (entries) {
 const navObserver = new IntersectionObserver(stickyNav, {
   root: null,
   treshhold: 0,
-  // rootMargin: "-200px",
+  rootMargin: `-${navheight}px`,
 });
 
-navObserver.observe(nav);
+navObserver.observe(header);

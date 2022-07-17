@@ -123,6 +123,7 @@ ul {
   background-color: var(--white);
   z-index: 999;
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 30%);
+  transition: all 0.8s ease-in-out;
 }
 
 /* ------------   MENU ACTIVE ---------------------------------- */
@@ -280,7 +281,7 @@ ul {
 /* ------------ SECTION 1 BENEFITS ---------------------------------- */
 #section-1 {
   padding: 40px 32px;
-  scroll-margin-top: 200px;
+  scroll-margin-block-start: 100px;
 }
 
 .benefits-container {
@@ -298,6 +299,7 @@ ul {
 @media (min-width: 768px) {
   #section-1 {
     padding: 40px 60px;
+    scroll-margin-block-start: 200px;
   }
 
   .benefits-container {
@@ -315,7 +317,7 @@ ul {
 /* ------------ SECTION 2 PROJECTS  ---------------------------------- */
 #section-2 {
   padding: 40px 32px;
-  scroll-margin-top: 200px;
+  scroll-margin-block-start: 100px;
 }
 
 .projects-container {
@@ -342,6 +344,7 @@ ul {
 @media (min-width: 768px) {
   #section-2 {
     padding: 40px 60px;
+    scroll-margin-block-start: 200px;
   }
 
   .project-img {
@@ -424,7 +427,7 @@ ul {
 /* ------------ SECTION 3 TESTIMONIALS ---------------------------------- */
 #section-3 {
   padding: 40px 32px;
-  scroll-margin-top: 200px;
+  scroll-margin-block-start: 100px;
 }
 
 .testimonials-container {
@@ -458,6 +461,7 @@ ul {
 @media (min-width: 768px) {
   #section-3 {
     padding: 40px 60px;
+    scroll-margin-block-start: 200px;
   }
 
   .testimonials-container {
@@ -659,8 +663,9 @@ textarea {
   border: none;
   border-radius: 10px;
   font-family: "Inter", sans-serif;
-  margin: 5px 0 15px 0;
+  margin: 10px 0 15px 0;
 }
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -679,7 +684,7 @@ textarea {
 }
 
 .contact-elements {
-  padding: 40px 32px;
+  padding: 40px 32px 5px 32px;
 }
 
 .contact-elements h1 {
@@ -706,6 +711,11 @@ label {
 
 .contact-after {
   display: none;
+  justify-content: center;
+}
+
+.contact-after h2 {
+  font-size: 2em;
 }
 
 @media (min-width: 768px) {
@@ -726,6 +736,7 @@ label {
     flex: 1;
     align-self: center;
     margin: 7vw 0 7vw 5vw;
+    padding: 0;
   }
 
   .connect-illu {
@@ -735,6 +746,7 @@ label {
   input,
   textarea {
     width: 90%;
+    margin: 5px 0 10px 0;
   }
 
   .btn-send {
@@ -745,5 +757,9 @@ label {
 @media (min-width: 1024px) {
   .contact-elements {
     margin: 1vw 0 1vw 5vw;
+  }
+
+  .contact-container {
+    height: 100vh;
   }
 }

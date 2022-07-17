@@ -11,7 +11,7 @@ buttonSend.addEventListener("click", () => {
     alert("Fields cannot be empty");
   } else {
     contactBefore.style.display = "none";
-    contactAfter.style.display = "block";
+    contactAfter.style.display = "flex";
     contactContainer.style.height = "100vh";
   }
 });
