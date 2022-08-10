@@ -8,7 +8,7 @@
 
 ### Overview
 
-This is my first portfolio project for a fictional digital agency. The focus of this project was to practice responsive web design. 
+This is my portfolio project for a fictional digital agency. The focus of this project was to practice responsive web design. 
 
 I have used responsible images with different resolutions for mobile and desktop versions as well as created media queries for mobile, tablet, and desktop (mobile-first approach). 
 
